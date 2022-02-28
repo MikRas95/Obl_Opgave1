@@ -4,21 +4,12 @@ namespace Obl_Opgave1
 {
     public class Car
     {
-        private int _id;
         private string _model;
         private double _price;
         private string _licensePlate;
 
-        // LAV ID / Skal der laves en test på id???????
-        //public int Id
-        //{
-        //    get => _id;
-        //    set
-        //    {
-
-        //    }
-        //}
-
+        public int Id { get; set; }
+       
         public string Model
         {
             get => _model;
@@ -46,7 +37,7 @@ namespace Obl_Opgave1
             get => _licensePlate;
             set
             {
-                if (value == null) throw new ArgumentNullException("LicensePlate", "LicensePlate must not be null");
+                if (value == null) throw new ArgumentNullException("licensePlate", "LicensePlate must not be null");
                 if (value.Length < 2 || value.Length > 7) throw new ArgumentException("LicensePlate length must be between 2 and 7 characters");
                 _licensePlate = value;
             }
