@@ -47,8 +47,9 @@ namespace Obl_Opgave1
         {
 
         }
-        public Car(string model, double price, string licensePlate)
+        public Car(int id, string model, double price, string licensePlate)
         {
+            Id = id;
             Model = model;
             Price = price;
             LicensePlate = licensePlate;

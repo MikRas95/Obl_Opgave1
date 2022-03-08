@@ -15,11 +15,12 @@ namespace Obl_Opgave1.Tests
         [TestInitialize]
         public void Init()
         {
-            _car = new Car("Tesla",1000000,"ABC");
+            _car = new Car(1,"Tesla",1000000,"ABC");
         }
         [TestMethod()]
         public void TestConstructor()
         {
+            Assert.AreEqual(1,_car.Id);
             Assert.AreEqual("Tesla", _car.Model);
             Assert.AreEqual(1000000, _car.Price);
             Assert.AreEqual("ABC", _car.LicensePlate);
